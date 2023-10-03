@@ -14,11 +14,16 @@
 				display: block;
 				flex-direction: column;
 			}
+			.leftimg {
+				float:left; 
+				margin: 7px 7px 7px 0; 
+			}
 		</style>
 	</head> 
 	<body> 
 		<header>
 			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKA-W2AwkQz6Pidf4qsh-KdsjeVLKI0gPiRw&usqp=CAU" width="200" draggable="false" alt="Logo">
+			<h1 style="text-align:center;">Податок на додану вартість </h1> 
 			<nav id="menu">
 				<ul class="list">
 					<li class="li"><a href="index1.html">Головна</a></li>
@@ -48,16 +53,15 @@
 					<p>З метою оподаткування цим податком до операцій з ввезення товарів на митну територію України прирівнюється поміщення товарів у будь-який митний режим, визначений Митним кодексом України.</p>
 				</p>
 				<div class="wrapper">
-					<input type="text" id = "input_a">
-					<input type="text" id = "input_b">
-					<input type="text" id = "input_c">
-					<button id = "btn">Action</button>
+					<p>Введіть суму, з якої хочете розрахувати податок:
+					<input type="text" id = "input_a"></p>
+					<p><button id = "btn">Розрахувати</button></p>
+					<p>Сума податку складає <input type="text" id = "input_c"></p>
 					</div>
 				<script>
 					function fnc(){
 						let a = parseInt(input_a.value);
-						let b = parseInt(input_b.value);
-						let c = a + b;
+						let c = a * 0.2;
 						input_c.value = c;
 						console.log(c);
 					}
@@ -74,22 +78,19 @@
 						по операціях з постачання на митній території України та ввезення на митну територію України сільськогосподарської продукції, що класифікується за такими кодами згідно з УКТ ЗЕД: 1001, 1003, 1005, 1201, 1205, 1206 00.
 				  </p>
 				  <div class="wrapper">
-					<div class=".d1">
-					Введіть суму, з якої хочете розрахувати податок:
-					<input type="text" id = "input_a">
-					<p><button id = "btn">Розрахувати</button></p>
-					<p>Сума податку від введеної вами суми:
-					<input type="text" id = "input_c"></p>
-				</div>
+					<p>Введіть суму, з якої хочете розрахувати податок:
+					<input type="text" id = "input_b"></p>
+					<p><button id = "btc">Розрахувати</button></p>
+					<p>Сума податку складає <input type="text" id = "input_d"></p>
 					</div>
 				<script>
 					function fnc(){
-						let a = parseInt(input_a.value);
-						let c = a * 0.14;
-						input_c.value = c;
-						console.log(c);
+						let b = parseInt(input_b.value);
+						let d = b * 0.14;
+						input_d.value = d;
+						console.log(d);
 					}
-					btn.addEventListener("click",fnc);
+					btc.addEventListener("click",fnc);
 				</script>
 			  </div>
 				</div>
@@ -108,29 +109,26 @@
 						<li>постачання послуг із тимчасового розміщування (проживання), що надаються готелями і подібними засобами тимчасового розміщування (клас 55.10 група 55 КВЕД ДК 009:2010);</li>	
 					</p>
 					<div class="wrapper">
-						<div class=".d1">
-						Введіть суму, з якої хочете розрахувати податок:
-						<input type="text" id = "input_a">
-						<p><button id = "btn">Розрахувати</button></p>
-						<p>Сума податку від введеної вами суми:
-						<input type="text" id = "input_c"></p>
-					</div>
+						<p>Введіть суму, з якої хочете розрахувати податок:
+						<input type="text" id = "input_e"></p>
+						<button id = "btf">Розрахувати</button></p>
+						<p>Сума податку складає <input type="text" id = "input_f"></p>
 						</div>
 					<script>
 						function fnc(){
-							let a = parseInt(input_a.value);
-							let c = a * 0.07;
-							input_c.value = c;
-							console.log(c);
+							let e = parseInt(input_e.value);
+							let f = e * 0.07;
+							input_f.value = f;
+							console.log(f);
 						}
-						btn.addEventListener("click",fnc);
+						btf.addEventListener("click",fnc);
 					</script>
 				  </div>
 				  </div>
 				</div> 
 				<div>
 					<div class="post">
-						<img height="250" width="350" src="https://devisu.ua/uploads/articles/VAT-recalculation.jpg" alt="Card image cap" >
+						<p><img height="250" width="350" src="https://devisu.ua/uploads/articles/VAT-recalculation.jpg" alt="Card image cap" class="leftimg">
 						<div>
 						<h3>Операції, що підлягають оподаткуванню за ставкою 0%</h3>
 						<p>
@@ -180,21 +178,21 @@
 						</ol>
 						</p>
 						<div class="wrapper">
-							Введіть суму, з якої хочете розрахувати податок:
-							<input type="text" id = "input_a">
-							<p><button id = "btn">Розрахувати</button></p>
-							<p>Сума податку від введеної вами суми:
-							<input type="text" id = "input_c"></p>
-						</div>
+							<p>Введіть суму, з якої хочете розрахувати податок:
+							<input type="text" id = "input_g"></p>
+							<p><button id = "bth">Розрахувати</button></p>
+							<p>Сума податку складає <input type="text" id = "input_h"></p>
+							</div>
 						<script>
 							function fnc(){
-								let a = parseInt(input_a.value);
-								let c = a * 0;
-								input_c.value = c;
-								console.log(c);
+								let g = parseInt(input_g.value);
+								let h = g * 0;
+								input_h.value = h;
+								console.log(h);
 							}
-							btn.addEventListener("click",fnc);
+							bth.addEventListener("click",fnc);
 						</script>
+						</p>
 					  </div>
 					  </div>
 					</div>

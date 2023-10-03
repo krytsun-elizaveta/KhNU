@@ -9,7 +9,8 @@
 	<body> 
 		<header>
 			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKA-W2AwkQz6Pidf4qsh-KdsjeVLKI0gPiRw&usqp=CAU" width="200" draggable="false" alt="Logo">
-			<nav id="menu">
+			<h1 style="text-align:center;">Податок з доходів фізичних осіб </h1> 
+            <nav id="menu">
 				<ul class="list">
 					<li class="li"><a href="index1.html">Головна</a></li>
 					<li><a href="index.html">Про податки</a></li>
@@ -33,7 +34,21 @@
 				<p>
 					18% ПДФО - основна ставка, яка використовується для оподаткування більшості доходів: зарплатних, підприємницьких, а також винагороди, що отримується за цивільно- правовим договором;
 				</p>
-				<a href="post1.html">Розрахувати</a>
+				<div class="wrapper">
+					<p>Введіть суму, з якої хочете розрахувати податок:
+					<input type="text" id = "input_a1"></p>
+					<p><button id = "btn1">Розрахувати</button></p>
+					<p>Сума податку складає <input type="text" id = "input_c1"></p>
+					</div>
+				<script>
+					function fnc(){
+						let a1 = parseInt(input_a1.value);
+						let c1 = a1 * 0.18;
+						input_c1.value = c1;
+						console.log(c1);
+					}
+					btn1.addEventListener("click",fnc);
+				</script>
 			  </div>
 			</div>
 			<div>
@@ -44,7 +59,21 @@
 					<p>
 						9% ПДФО - ставка, яка використовується лише з метою оподаткування дивідендів, що нараховуються нерезидентами, а також суб'єктами господарювання неплатниками податку на прибуток. Серед іншого, цю ставку необхідно застосовувати для оподаткування доходів, що сплачуються платниками ЄП фізичним особам;
 				  </p>
-				  <a href="post1.html">Розрахувати</a>
+				  <div class="wrapper">
+					<p>Введіть суму, з якої хочете розрахувати податок:
+					<input type="text" id = "input_a2"></p>
+					<p><button id = "btn2">Розрахувати</button></p>
+					<p>Сума податку складає <input type="text" id = "input_c2"></p>
+					</div>
+				<script>
+					function fnc(){
+						let a2 = parseInt(input_a2.value);
+						let c2 = a2 * 0.09;
+						input_c2.value = c2;
+						console.log(c2);
+					}
+					btn2.addEventListener("click",fnc);
+				</script>
 				</div>
 			</div>
 			<div>
@@ -55,7 +84,21 @@
 					<p>
 						5% ПДФО - ця величина використовуватиметься для продажу нерухомості, продажу рухомого майна або його успадкування, а також при отриманні подарунків;
 					</p>
-					<a href="post1.html">Розрахувати</a></p>
+					<div class="wrapper">
+                        <p>Введіть суму, з якої хочете розрахувати податок:
+                        <input type="text" id = "input_a3"></p>
+                        <p><button id = "btn3">Розрахувати</button></p>
+                        <p>Сума податку складає <input type="text" id = "input_c3"></p>
+                        </div>
+                    <script>
+                        function fnc(){
+                            let a3 = parseInt(input_a3.value);
+                            let c3 = a3 * 0.05;
+                            input_c3.value = c3;
+                            console.log(c3);
+                        }
+                        btn3.addEventListener("click",fnc);
+                    </script>
 				  </div>
 				</div> 
 				<div>
@@ -66,7 +109,21 @@
 						<p>
 							0% ПДФО нульова ставка податку передбачена для випадків, коли фізична особа отримує подарунки або матеріальну допомогу вартістю у межах, передбачених Податковим кодексом, а також при оподаткуванні спадщини, яку фізична особа отримує від близького родича згідно з пунктом 167,3 ПКУ. Використання нульової ставки означає що отриманий фізособою дохід підлягає декларуванню, проте податки з таких видів доходів не сплачуватимуться.
 						</p>
-						<a href="post1.html">Розрахувати</a></p>
+						<div class="wrapper">
+                            <p>Введіть суму, з якої хочете розрахувати податок:
+                            <input type="text" id = "input_a4"></p>
+                            <p><button id = "btn4">Розрахувати</button></p>
+                            <p>Сума податку складає <input type="text" id = "input_c4"></p>
+                            </div>
+                        <script>
+                            function fnc(){
+                                let a4 = parseInt(input_a4.value);
+                                let c4 = a4 * 0;
+                                input_c4.value = c4;
+                                console.log(c4);
+                            }
+                            btn4.addEventListener("click",fnc);
+                        </script>
 					  </div>
 					</div>
 		  </div>
